@@ -11,12 +11,6 @@ export default function Home() {
         
         <div className="flex flex-col items-center gap-3 mb-8">
           <ModalTrigger />
-          <Link 
-            href="/modal-demo"
-            className="text-sm text-purple-600 dark:text-purple-400 hover:underline"
-          >
-            Узнать больше о модальном окне →
-          </Link>
         </div>
         
         <p className="text-center text-lg mb-4 text-gray-600 dark:text-gray-400">
@@ -129,48 +123,6 @@ export default function Home() {
               </div>
             </div>
           </Link>
-        </div>
-
-        <div className="mt-12 bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
-          <h2 className="text-2xl font-bold mb-4">Сравнение методов</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b dark:border-gray-700">
-                  <th className="text-left p-2">Метод</th>
-                  <th className="text-left p-2">Скорость</th>
-                  <th className="text-left p-2">SEO</th>
-                  <th className="text-left p-2">Актуальность</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b dark:border-gray-700">
-                  <td className="p-2 font-semibold">SSG</td>
-                  <td className="p-2">⚡⚡⚡</td>
-                  <td className="p-2">✅ Отлично</td>
-                  <td className="p-2">❌ Только при билде</td>
-                </tr>
-                <tr className="border-b dark:border-gray-700">
-                  <td className="p-2 font-semibold">SSR</td>
-                  <td className="p-2">⚡⚡</td>
-                  <td className="p-2">✅ Отлично</td>
-                  <td className="p-2">✅ Всегда актуально</td>
-                </tr>
-                <tr className="border-b dark:border-gray-700">
-                  <td className="p-2 font-semibold">ISR</td>
-                  <td className="p-2">⚡⚡⚡</td>
-                  <td className="p-2">✅ Отлично</td>
-                  <td className="p-2">⚡ Периодическое обновление</td>
-                </tr>
-                <tr>
-                  <td className="p-2 font-semibold">CSR</td>
-                  <td className="p-2">⚡</td>
-                  <td className="p-2">❌ Сложнее</td>
-                  <td className="p-2">✅ В реальном времени</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </div>
       </div>
     </div>

@@ -246,34 +246,6 @@ export default function WebSocketDemo() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-6 mb-6">
-          <h2 className="text-xl font-semibold mb-3">Что такое WebSocket?</h2>
-          <p className="text-sm mb-3">
-            WebSocket - это протокол для двусторонней связи между клиентом и сервером через одно TCP-соединение.
-            В отличие от HTTP, где клиент инициирует запрос, WebSocket позволяет серверу отправлять данные клиенту в любое время.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-            <div>
-              <strong className="text-green-700 dark:text-green-400">Преимущества:</strong>
-              <ul className="list-disc list-inside ml-2 mt-1">
-                <li>Реальное время (real-time)</li>
-                <li>Низкая задержка</li>
-                <li>Двусторонняя связь</li>
-                <li>Меньше нагрузки на сервер</li>
-              </ul>
-            </div>
-            <div>
-              <strong className="text-blue-700 dark:text-blue-400">Примеры использования:</strong>
-              <ul className="list-disc list-inside ml-2 mt-1">
-                <li>Чаты и мессенджеры</li>
-                <li>Live обновления</li>
-                <li>Онлайн-игры</li>
-                <li>Биржевые котировки</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         <div className="text-center">
           <Link
             href="/"

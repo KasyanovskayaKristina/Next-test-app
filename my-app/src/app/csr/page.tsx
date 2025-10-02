@@ -177,27 +177,6 @@ export default function CSRPage() {
           )}
         </div>
 
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-6 mb-6">
-          <h2 className="text-xl font-semibold mb-3">Когда использовать CSR?</h2>
-          <ul className="list-disc list-inside space-y-2 ml-2">
-            <li>Административные панели и дашборды</li>
-            <li>Приложения, требующие частых обновлений UI</li>
-            <li>Интерактивные карты и графики</li>
-            <li>Чаты и мессенджеры</li>
-            <li>Страницы, не требующие SEO (за авторизацией)</li>
-          </ul>
-        </div>
-
-        <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-3">Недостатки</h2>
-          <ul className="list-disc list-inside space-y-2 ml-2">
-            <li>Медленная начальная загрузка (нужно загрузить весь JS)</li>
-            <li>Проблемы с SEO (поисковики могут не видеть контент)</li>
-            <li>Требует хорошего интернет-соединения</li>
-            <li>Увеличенное потребление батареи на мобильных устройствах</li>
-          </ul>
-        </div>
-
         <div style={{ textAlign: 'center' }}>
           <Link href="/" className="back-link">
             ← Вернуться на главную
