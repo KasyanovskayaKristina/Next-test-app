@@ -1,3 +1,4 @@
+import ModalTrigger from "@/components/ModalTrigger";
 import Link from "next/link";
 
 export default function Home() {
@@ -7,6 +8,16 @@ export default function Home() {
         <h1 className="text-5xl font-bold mb-6 text-center">
           Next.js Типы Рендеринга
         </h1>
+
+         <div className="flex flex-col items-center gap-3 mb-8">
+          <ModalTrigger />
+          <Link 
+            href="/modal-demo"
+            className="text-sm text-purple-600 dark:text-purple-400 hover:underline"
+          >
+            Узнать больше о модальном окне →
+          </Link>
+        </div>
         
         <p className="text-center text-lg mb-4 text-gray-600 dark:text-gray-400">
           Изучите различные методы рендеринга страниц в Next.js
