@@ -129,28 +129,6 @@ export default async function ISRPage() {
           )}
         </div>
 
-        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 mb-6">
-          <h2 className="text-xl font-semibold mb-3">Как это работает?</h2>
-          <ol className="list-decimal list-inside space-y-2 ml-2">
-            <li>Первая версия страницы генерируется во время билда</li>
-            <li>При запросе пользователь получает кешированную версию (быстро!)</li>
-            <li>После истечения времени revalidate следующий запрос триггерит регенерацию</li>
-            <li>Страница обновляется в фоне, пользователи получают старую версию</li>
-            <li>После завершения регенерации новая версия становится доступной</li>
-          </ol>
-        </div>
-
-        <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-3">Когда использовать ISR?</h2>
-          <ul className="list-disc list-inside space-y-2 ml-2">
-            <li>E-commerce каталоги (цены обновляются периодически)</li>
-            <li>Блоги с новыми статьями</li>
-            <li>Страницы с API данными, которые меняются не часто</li>
-            <li>Новостные сайты</li>
-            <li>Социальные сети (лента постов)</li>
-          </ul>
-        </div>
-
         <div className="mt-8 text-center">
           <Link
             href="/"
