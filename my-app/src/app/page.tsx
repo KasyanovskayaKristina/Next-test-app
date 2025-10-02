@@ -1,103 +1,178 @@
-import Image from "next/image";
+import Link from "next/link";
+import ModalTrigger from "@/components/ModalTrigger";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="min-h-screen p-8 font-sans">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-5xl font-bold mb-6 text-center">
+          Next.js Типы Рендеринга
+        </h1>
+        
+        <div className="flex flex-col items-center gap-3 mb-8">
+          <ModalTrigger />
+          <Link 
+            href="/modal-demo"
+            className="text-sm text-purple-600 dark:text-purple-400 hover:underline"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            Узнать больше о модальном окне →
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        
+        <p className="text-center text-lg mb-4 text-gray-600 dark:text-gray-400">
+          Pазличные методы рендеринга страниц в Next.js
+        </p>
+        
+        <div className="text-center mb-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg p-4">
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            <strong>Все страницы демонстрируют работу с API!</strong>
+          </p>
+          <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+            Используется <a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">JSONPlaceholder</a> - бесплатный REST API для тестирования
+          </p>
+        </div>
+
+        <div className="mb-12 bg-gradient-to-r from-cyan-50 to-blue-50 dark:from-cyan-900/20 dark:to-blue-900/20 border-2 border-cyan-300 dark:border-cyan-700 rounded-xl p-6">
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-2xl font-bold text-cyan-700 dark:text-cyan-400 mb-2 flex items-center gap-2">
+                WebSocket в реальном времени
+              </h2>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                Демонстрация двусторонней связи клиент-сервер через WebSocket протокол
+              </p>
+              <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-1 mb-4">
+                <li>Подключение к WebSocket серверу</li>
+                <li>Отправка и получение сообщений в реальном времени</li>
+                <li>Управление состоянием соединения</li>
+                <li>Обработка событий (onopen, onmessage, onerror, onclose)</li>
+              </ul>
+            </div>
+          </div>
+          <Link 
+            href="/websocket-demo"
+            className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg"
+          >
+            Открыть WebSocket демо →
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Link href="/ssg">
+            <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-800 rounded-xl p-6 hover:shadow-xl transition-all hover:scale-105 cursor-pointer">
+              <div className="flex items-start justify-between mb-3">
+                <h2 className="text-2xl font-bold text-blue-700 dark:text-blue-400">
+                  SSG
+                </h2>
+              </div>
+              <h3 className="font-semibold mb-2">Static Site Generation</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Страница генерируется во время сборки (build time). 
+                Загружает список пользователей из API.
+              </p>
+              <div className="mt-4 text-blue-600 dark:text-blue-400 font-semibold">
+                Перейти →
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/ssr">
+            <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-200 dark:border-green-800 rounded-xl p-6 hover:shadow-xl transition-all hover:scale-105 cursor-pointer">
+              <div className="flex items-start justify-between mb-3">
+                <h2 className="text-2xl font-bold text-green-700 dark:text-green-400">
+                  SSR
+                </h2>
+              </div>
+              <h3 className="font-semibold mb-2">Server-Side Rendering</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Страница рендерится на сервере при каждом запросе. 
+                Показывает случайный пост из API.
+              </p>
+              <div className="mt-4 text-green-600 dark:text-green-400 font-semibold">
+                Перейти →
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/isr">
+            <div className="bg-purple-50 dark:bg-purple-900/20 border-2 border-purple-200 dark:border-purple-800 rounded-xl p-6 hover:shadow-xl transition-all hover:scale-105 cursor-pointer">
+              <div className="flex items-start justify-between mb-3">
+                <h2 className="text-2xl font-bold text-purple-700 dark:text-purple-400">
+                  ISR
+                </h2>
+              </div>
+              <h3 className="font-semibold mb-2">Incremental Static Regeneration</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Статическая генерация с периодическим обновлением каждые 10 секунд. 
+                Показывает задачи из API.
+              </p>
+              <div className="mt-4 text-purple-600 dark:text-purple-400 font-semibold">
+                Перейти →
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/csr">
+            <div className="bg-orange-50 dark:bg-orange-900/20 border-2 border-orange-200 dark:border-orange-800 rounded-xl p-6 hover:shadow-xl transition-all hover:scale-105 cursor-pointer">
+              <div className="flex items-start justify-between mb-3">
+                <h2 className="text-2xl font-bold text-orange-700 dark:text-orange-400">
+                  CSR
+                </h2>
+              </div>
+              <h3 className="font-semibold mb-2">Client-Side Rendering</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Рендеринг происходит на клиенте (в браузере). 
+                Загружает фото из API по клику.
+              </p>
+              <div className="mt-4 text-orange-600 dark:text-orange-400 font-semibold">
+                Перейти →
+              </div>
+            </div>
+          </Link>
+        </div>
+
+        <div className="mt-12 bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+          <h2 className="text-2xl font-bold mb-4">Сравнение методов</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b dark:border-gray-700">
+                  <th className="text-left p-2">Метод</th>
+                  <th className="text-left p-2">Скорость</th>
+                  <th className="text-left p-2">SEO</th>
+                  <th className="text-left p-2">Актуальность</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b dark:border-gray-700">
+                  <td className="p-2 font-semibold">SSG</td>
+                  <td className="p-2">⚡⚡⚡</td>
+                  <td className="p-2">✅ Отлично</td>
+                  <td className="p-2">❌ Только при билде</td>
+                </tr>
+                <tr className="border-b dark:border-gray-700">
+                  <td className="p-2 font-semibold">SSR</td>
+                  <td className="p-2">⚡⚡</td>
+                  <td className="p-2">✅ Отлично</td>
+                  <td className="p-2">✅ Всегда актуально</td>
+                </tr>
+                <tr className="border-b dark:border-gray-700">
+                  <td className="p-2 font-semibold">ISR</td>
+                  <td className="p-2">⚡⚡⚡</td>
+                  <td className="p-2">✅ Отлично</td>
+                  <td className="p-2">⚡ Периодическое обновление</td>
+                </tr>
+                <tr>
+                  <td className="p-2 font-semibold">CSR</td>
+                  <td className="p-2">⚡</td>
+                  <td className="p-2">❌ Сложнее</td>
+                  <td className="p-2">✅ В реальном времени</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
