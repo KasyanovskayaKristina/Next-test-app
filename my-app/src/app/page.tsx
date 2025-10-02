@@ -1,5 +1,5 @@
-import ModalTrigger from "@/components/ModalTrigger";
 import Link from "next/link";
+import ModalTrigger from "@/components/ModalTrigger";
 
 export default function Home() {
   return (
@@ -8,8 +8,8 @@ export default function Home() {
         <h1 className="text-5xl font-bold mb-6 text-center">
           Next.js Типы Рендеринга
         </h1>
-
-         <div className="flex flex-col items-center gap-3 mb-8">
+        
+        <div className="flex flex-col items-center gap-3 mb-8">
           <ModalTrigger />
           <Link 
             href="/modal-demo"
@@ -20,7 +20,7 @@ export default function Home() {
         </div>
         
         <p className="text-center text-lg mb-4 text-gray-600 dark:text-gray-400">
-          Изучите различные методы рендеринга страниц в Next.js
+          Pазличные методы рендеринга страниц в Next.js
         </p>
         
         <div className="text-center mb-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg p-4">
@@ -30,6 +30,31 @@ export default function Home() {
           <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
             Используется <a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">JSONPlaceholder</a> - бесплатный REST API для тестирования
           </p>
+        </div>
+
+        <div className="mb-12 bg-gradient-to-r from-cyan-50 to-blue-50 dark:from-cyan-900/20 dark:to-blue-900/20 border-2 border-cyan-300 dark:border-cyan-700 rounded-xl p-6">
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-2xl font-bold text-cyan-700 dark:text-cyan-400 mb-2 flex items-center gap-2">
+                WebSocket в реальном времени
+              </h2>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                Демонстрация двусторонней связи клиент-сервер через WebSocket протокол
+              </p>
+              <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-1 mb-4">
+                <li>Подключение к WebSocket серверу</li>
+                <li>Отправка и получение сообщений в реальном времени</li>
+                <li>Управление состоянием соединения</li>
+                <li>Обработка событий (onopen, onmessage, onerror, onclose)</li>
+              </ul>
+            </div>
+          </div>
+          <Link 
+            href="/websocket-demo"
+            className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg"
+          >
+            Открыть WebSocket демо →
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -121,23 +146,27 @@ export default function Home() {
               <tbody>
                 <tr className="border-b dark:border-gray-700">
                   <td className="p-2 font-semibold">SSG</td>
-                  <td className="p-2">Отлично</td>
-                  <td className="p-2">Только при билде</td>
+                  <td className="p-2">⚡⚡⚡</td>
+                  <td className="p-2">✅ Отлично</td>
+                  <td className="p-2">❌ Только при билде</td>
                 </tr>
                 <tr className="border-b dark:border-gray-700">
                   <td className="p-2 font-semibold">SSR</td>
-                  <td className="p-2">Отлично</td>
-                  <td className="p-2">Всегда актуально</td>
+                  <td className="p-2">⚡⚡</td>
+                  <td className="p-2">✅ Отлично</td>
+                  <td className="p-2">✅ Всегда актуально</td>
                 </tr>
                 <tr className="border-b dark:border-gray-700">
                   <td className="p-2 font-semibold">ISR</td>
-                  <td className="p-2">Отлично</td>
-                  <td className="p-2">Периодическое обновление</td>
+                  <td className="p-2">⚡⚡⚡</td>
+                  <td className="p-2">✅ Отлично</td>
+                  <td className="p-2">⚡ Периодическое обновление</td>
                 </tr>
                 <tr>
                   <td className="p-2 font-semibold">CSR</td>
-                  <td className="p-2">Сложнее</td>
-                  <td className="p-2">В реальном времени</td>
+                  <td className="p-2">⚡</td>
+                  <td className="p-2">❌ Сложнее</td>
+                  <td className="p-2">✅ В реальном времени</td>
                 </tr>
               </tbody>
             </table>

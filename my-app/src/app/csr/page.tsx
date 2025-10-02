@@ -141,7 +141,7 @@ export default function CSRPage() {
             disabled={loadingPhotos}
             className="load-button"
           >
-            {loadingPhotos ? '⏳ Загрузка...' : photos.length > 0 ? '🔄 Обновить фото' : '📸 Загрузить фото'}
+            {loadingPhotos ? 'Загрузка...' : photos.length > 0 ? 'Обновить фото' : 'Загрузить фото'}
           </button>
 
           {photos.length > 0 && (
